@@ -1,0 +1,168 @@
+
+/* Hero Section */
+.hero {
+    /* background-image: url("../images/homeImages/growing-organic-ecological-plants-fields-background.jpg"); */
+    /* background-image: url("../images/backgrounds/backgroundplant.jpg"); */
+    background-image: url("../images/homeImages/growing-organic-ecological-plants-fields-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(224, 236, 224);
+    
+}
+
+.hero p {
+    font-size: 2.0rem;
+    font-weight: 300;
+    margin-top: 15px;
+    color:white;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px 20px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: black;
+    background-color: rgb(241, 193, 193);
+    box-shadow: 0 0 10px rgb(58, 58, 58);
+}
+
+/* Animation */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+  
+
+.animated-image {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content-text h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.content-image img{
+    height:250px;
+    width:250px;
+    border-radius: 30px;
+}
+
+.btn-primary {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+}
+
+/* FAQ section styling */
+.faq-section {
+    padding: 60px;
+    background-color: rgb(2, 2, 2);
+    border-radius: 10px;
+}
+
+.faq-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dad0ce;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.accordion-button {
+    background-color: #1fee0c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #15b300;
+    color:rgb(19, 15, 15);
+}
+
+.accordion-button:hover {
+    background-color: #185e16;
+    transform: scale(1.02);
+}
+
+.accordion-body {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Collapse animation */
+.accordion-collapse {
+    transition: height 0.5s ease;
+}
+
+/* footer */

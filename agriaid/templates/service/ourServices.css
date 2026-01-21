@@ -1,0 +1,155 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'raleway', sans-serif; /* Make sure to include a fallback font */
+    
+    background-size: cover;
+}
+
+.wrapper
+
+{
+font-family:'raleway';
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background: rgba(250, 250, 250, 0.1);
+
+
+}
+.wrapper h1
+
+{
+font-size:3em;
+margin:25px 0;
+text-align:center;
+font-weight:500;
+color:black;
+}
+.wrapper p{
+	color:black;
+}
+
+
+.content-box{
+
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+width:1000px;
+margin-top:30px;
+
+}
+
+.card{
+
+	min-height: 220px;
+	width: 320px;
+	padding: 30px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background:rgba(245, 242, 242, 0.9);
+	margin: 10px 4px ;
+	box-shadow:0px 15px 30px rgba(0,0,0,0.2);
+
+}
+
+.card i{
+margin:20px;
+color:#ff5724;
+}
+
+.card h2
+{
+margin-bottom : 12px;
+font-weight:400;
+text-align:center;
+
+}
+.card p{
+color:#6c757d;
+text-align:center;
+
+}
+.container{
+	justify-content: space-around;
+	display: flex;
+	align: center;
+}
+.card:nth-child(1){
+background:linear-gradient(45deg,rgba(255,28,8,0.1)0%,rgba(255,0,82,0.1)100%),url('1.jpeg');
+color:white;
+font-size: large;
+background-size: cover;
+ }
+.card:nth-child(1):hover p{
+	color:white;
+}
+.card:nth-child(1):hover i{
+	color:white;
+}
+.card:nth-child(2){
+	background:linear-gradient(45deg,rgba(255,28,8,0.1)0%,rgba(255,0,82,0.1)100%),url('2.jpeg');
+	color:white;
+	background-size: cover;
+	 }
+	.card:nth-child(2):hover p{
+		color:white;
+	}
+	.card:nth-child(2):hover i{
+		color:white;
+}
+.card:nth-child(3){
+	background:linear-gradient(45deg,rgba(255,28,8,0.1)0%,rgba(255,0,82,0.1)100%),url('3.jpeg');
+	color:white;
+	background-size: cover;
+	 }
+	.card:nth-child(3):hover p{
+		color:white;
+	}
+	.card:nth-child(3):hover i{
+		color:white;
+	}
+                                 
+	.card:nth-child(4){
+		background:linear-gradient(45deg,rgba(255,28,8,0.1)0%,rgba(255,0,82,0.1)100%),url('4.jpeg');
+		color:white;
+		background-size: cover;
+		 }
+		.card:nth-child(4):hover p{
+			color:white;
+		}
+		.card:nth-child(4):hover i{
+			color:white;
+		}
+.card:nth-child(5){
+			background:linear-gradient(45deg,rgba(255,28,8,0.1)0%,rgba(255,0,82,0.1)100%),url('5.jpeg');
+			color:white;
+			background-size: cover;
+			 }
+			.card:nth-child(5):hover p{
+				color:white;
+			}
+			.card:nth-child(5):hover i{
+				color:white;
+			}
+			.card:nth-child(6){
+				background:linear-gradient(45deg,rgba(255,28,8,0.1)0%,rgba(255,0,82,0.1)100%),url('2.jpeg');
+				color:white;
+				background-size: cover;
+				 }
+				.card:nth-child(6):hover p{
+					color:white;
+				}
+				.card:nth-child(6):hover i{
+					color:white;

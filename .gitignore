@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+
+# Django
+db.sqlite3  # Ignore the SQLite database (if used)
+*.log
+staticfiles/
+media/
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Machine learning models
+*.h5    # TensorFlow/Keras model files
+*.pkl   # Scikit-learn or XGBoost models
+*.joblib  # Joblib serialized models
+*.onnx   # ONNX model files
+models/  # Folder where models are saved, if applicable
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files
+*.csv
+*.json
+*.xml
+*.xls
+*.xlsx
+
+# Environment variables and config
+.env
+*.ini
+*.cfg
+*.yml
+*.yaml
+
+# Deployment
+*.pem  # SSH keys for server deployment
+.DS_Store  # macOS file system
+.idea/     # PyCharm project files
+.vscode/   # VSCode project files
+
+# Cache and temp files
+*.bak
+*.swp
+*.tmp
+*.temp

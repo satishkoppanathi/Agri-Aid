@@ -1,0 +1,459 @@
+{% extends "base.html" %}
+{% block title %}
+Home {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Aid - Smart Farming Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+  
+
+
+</head>
+<style>
+    .hero {
+        background-image: url('../static/images/backgrounds/growing-organic-ecological-plants-fields-background.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the section */
+        background-position: center; /* Centers the background image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Sets the minimum height of the section */
+        position: relative; /* Positions the content correctly */
+        filter: brightness(75%);
+    }
+    .hero .btn {
+        background-color: rgb(226, 226, 233);
+        outline-style: solid;
+        outline-color: transparent;
+        outline-color: gray;
+        box-shadow: 0 0 0 2px;
+
+    }
+    .hero p {
+    font-size: 2.0rem;
+    font-weight: 300;
+    margin-top: 15px;
+    color:white;
+}
+
+
+    .hero h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    
+}
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+footer .content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #7f8c8d;
+}
+
+footer .logo-details {
+  display: flex;
+  align-items: center;
+}
+
+footer .logo-details .logo_name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin-left: 10px;
+}
+
+footer .media-icons a {
+  margin: 0 10px;
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+footer .media-icons a:hover {
+  color: #00b894;
+}
+
+footer .link-boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+footer .link-boxes .box {
+  width: 25%;
+}
+
+footer .link-boxes .box .link_name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00b894;
+}
+
+footer .link-boxes .box li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+footer .link-boxes .box li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+footer .link-boxes .box li a:hover {
+  color: #00b894;
+}
+
+footer .link-boxes .input-box input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+footer .link-boxes .input-box input[type="button"] {
+  padding: 10px 20px;
+  background-color: #00b894;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer .link-boxes .input-box input[type="button"]:hover {
+  background-color: #019874;
+}
+
+footer .bottom-details {
+  text-align: center;
+  padding-top: 20px;
+}
+
+footer .bottom-details p {
+  color: #bdc3c7;
+}
+
+footer .bottom-details a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+footer .bottom-details a:hover {
+  color: #00b894;
+}
+
+footer hr {
+  border: 1px solid #7f8c8d;
+  margin-top: 30px;
+}
+
+  
+
+    </style>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center text-center text-white">
+        <div class="container moduler">
+            <h2 class="display-3 animated fadeInDown">Empowering Farmers with Agri Aid</h2>
+            <p class="lead animated fadeInUp">AI-driven solutions for smarter, sustainable farming</p>
+            <a href="/cropRecommendation" class="btn btn-outline-light btn-lg mt-3 animated bounceIn"><i
+                    class="fas fa-seedling"></i> Crop Prediction</a>
+            <a href="/diseaseDetection" class="btn btn-outline-light btn-lg mt-3 animated bounceIn"><i class="fas fa-bug"></i> Disease Detection</a>
+            <a href="/fertilizerPredict" class="btn btn-outline-light btn-lg mt-3 animated bounceIn"><i
+                    class="fas fa-flask"></i> Fertilizer Prediction</a>
+        </div>
+    </section>
+
+    <section class="container mt-5 disease-detector">
+        <div class="disease-detection-trailer">
+            <h2 class="text-center mb-4">Revolutionizing Disease Detection</h2>
+            <p class="text-center lead mb-4">Discover how our advanced system diagnoses plant diseases with precision
+                and ease.</p>
+
+            <!-- Content Row 1 -->
+            <div class="content-row row align-items-center mb-4">
+                <div class="col-md-6">
+                    <div class="content-text">
+                        <h4>Image Capture</h4>
+                        <p>High-resolution cameras capture detailed images of plant leaves and stems to identify
+                            potential diseases.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-image">
+                        <img src="../static/images/backgrounds/capturing image.jpg" alt="Image Capture" class="img-fluid animated-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Row 2 -->
+            <div class="content-row row align-items-center mb-4">
+
+                <div class="col-md-6 order-md-2">
+                    <div class="content-text">
+                        <h4>Image Analysis</h4>
+                        <p>Advanced algorithms analyze the images to detect anomalies and disease patterns with high
+                            accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="content-image">
+                        <img src="../static/images/backgrounds/analysing.jpg" alt="Image Analysis" class="img-fluid animated-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Row 3 -->
+            <div class="content-row row align-items-center mb-4">
+                <div class="col-md-6">
+                    <div class="content-text">
+                        <h4>Data Processing</h4>
+                        <p>Our system processes the analyzed data to generate precise diagnostic information and
+                            treatment suggestions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-image">
+                        <img src="../static/images/backgrounds/image processing.jpg" alt="Data Processing"
+                            class="img-fluid animated-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Row 4 -->
+            <div class="content-row row align-items-center mb-4">
+
+                <div class="col-md-6 order-md-2">
+                    <div class="content-text">
+                        <h4>Result Presentation</h4>
+                        <p>Receive comprehensive reports on detected diseases and recommended treatments, ensuring
+                            effective plant care.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="content-image">
+                        <img src="../static/images/backgrounds/result.jpg" alt="Result Presentation" class="img-fluid animated-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg">Detect image</button>
+                <a href="/">Detect image</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="mb-4 fw-bold">Farmer Testimonials</h2>
+            <p class="text-muted mb-5">See what farmers are saying about Agri Aid's impact on their farming practices.
+            </p>
+            <div class="row">
+                <div class="col-12">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <p class="lead">"Agri Aid helped me boost my crop yield by 30% last season! Highly
+                                    recommended."</p>
+                                <p class="text-muted">- Farmer John</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="lead">"The AI-powered disease detection saved my farm from a major pest
+                                    outbreak."</p>
+                                <p class="text-muted">- Farmer Sarah</p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container mt-5 faq-section">
+        <h2 class="faq-header">Frequently Asked Questions</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Agri Aid?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Agri Aid is a comprehensive software solution that provides soil-based crop recommendations,
+                        disease detection, and growth insights using advanced image processing and machine learning.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How does the disease detection system work?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The system captures high-resolution images of plant leaves and stems and uses machine learning
+                        algorithms to detect potential diseases with high accuracy.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Is Agri Aid compatible with all devices?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, Agri Aid is responsive and accessible on all devices, including smartphones, tablets, and
+                        desktop computers.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        What are the benefits of using Agri Aid?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Agri Aid helps farmers make data-driven decisions by providing actionable insights based on soil
+                        analysis and plant health monitoring, improving crop yield and reducing risks.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        How accurate is the disease detection system?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Agri Aid uses advanced machine learning algorithms, achieving up to 90% accuracy in disease
+                        detection, depending on the type of plant and environmental factors.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- footer -->
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fab fa-pagelines "></i>
+          <span class="logo_name">AGRI AID</span>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">agri aid</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Web design</a></li>
+          <li><a href="#">Logo design</a></li>
+          <li><a href="#">Banner design</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+
+        <ul class="box input-box">
+           <li class="link_name">User Feedback</li> 
+          <li class='input1'><input type="text" placeholder="Enter your details"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <p>&copy Agri Aid.  All Rights reserved.<a href="privacy.html" class="text-light">privacy policy</a> | <a href="terms.html" class="text-light">Terms Of Service</a></p>
+        
+      </div>
+    </div>
+  </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+{% endblock body %} 

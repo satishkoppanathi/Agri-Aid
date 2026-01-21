@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}
+Contact {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/contact.css">
+  <style>
+    .container{
+        display: block;
+        margin-left: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="right">
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <div class="contact-info">
+            <div class="rcorners">
+                <h2><i class="fa-solid fa-envelope"></i> Email</h2>
+                <p>For general inquiries:<a href="#">info@agriaid.com</a></p>
+                <p>For support: <a href="#">support@agriaid.com</a></p>
+
+            </div>
+            <div class="phone">
+                <h2><i class="fa-solid fa-phone"></i> Phone</h2>
+                <p>Customer Service:<!-- <a href="tel:+911234567890">-->950544567892</a></p>
+                <p>Support Hotline:<!---<a href="tel:+10987654321">-->(098) 765-4321</a></p>
+            </div>
+            <div class="address">
+                <h2><i class="fa-solid fa-location-dot"></i>Address</h2>
+                <h3>Agri Aid limited </h3>
+                <p>RGUKT ongole</p>
+                <p>Ongole, ssn college, 515530</p>
+                <p>India</p>
+            </div>
+            <div class="social">
+                <h2>Social Media</h2>
+                <div class="social-media" align=center>
+                    <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a> |
+                    <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a> |
+                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a> |
+                    <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Contact Form</h2>
+
+          <form method="post" action="/contact" class="contact-form">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="desc" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+{% endblock body %}

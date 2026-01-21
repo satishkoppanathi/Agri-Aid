@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Fertilizer Predict {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Prediction Form</title>
+    <link rel="stylesheet" href="../static/css/fertilizerPredict.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    body{
+    padding: 40px 20px;
+    background-image: url("../images/backgrounds/flower-pot-plant-top-view.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    /* background-color: #fff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in;
+}
+            
+    /* body{
+        background-image: url('../static/images/backgrounds/flower-pot-plant-top-view.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        min-height: 100vh; 
+        position: relative; 
+    } */
+</style>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-seedling icon"></i> Welcome to Agri Aid's Fertilizer Prediction</h1>
+            <p class="lead">Provide soil and crop data to get accurate fertilizer recommendations.</p>
+        </div>
+    </header>
+
+    <section class="fertilizer-prediction">
+        <div class="form-container">
+            <h2><i class="fas fa-flask icon"></i> Fertilizer Prediction Form</h2>
+            <form action="/fertilizerPredict" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-thermometer-half icon"></i> Temperature (°C)</label>
+                    <input type="number" class="form-control" name="temperature" placeholder="Enter temperature"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-tint icon"></i> Humidity (%)</label>
+                    <input type="number" class="form-control" name="humidity" placeholder="Enter humidity" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-cloud icon"></i> Moisture (%)</label>
+                    <input type="number" class="form-control" name="moisture" placeholder="Enter moisture" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-leaf icon"></i> Soli Type</label>
+                    <input type="text" class="form-control" name="soilType" placeholder="Enter soil type" required>
+                </div>
+
+                <div class="form-group"></div>
+                <label class="form-label"><i class="fas fa-leaf icon"></i> Crop Type</label>
+                <input type="text" class="form-control" name="cropType" placeholder="Enter crop type" required>
+
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-flask icon"></i> Nitrogen (N)</label>
+                    <input type="number" class="form-control" name="nitrogen" placeholder="Enter nitrogen level"
+                        required>
+                </div>
+
+                <div class="form-group"></div>
+                <label class="form-label"><i class="fas fa-flask icon"></i> Potassium (K)</label>
+                <input type="number" class="form-control" name="potassium" placeholder="Enter potassium level" required>
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-flask icon"></i> Phosphorous (P)</label>
+                    <input type="number" class="form-control" name="phosphorous" placeholder="Enter phosphorous level"
+                        required>
+                </div>
+                <button type="submit" class="btn-submit"> Predict Fertilizer</button>
+                <div class="result" style="margin: auto;">
+                    {% if predicted_fertilizer %}
+                    <h6>SUGGESTED FERTILIZER :</h6>
+                    <h2>{{predicted_fertilizer}}</h2>
+                    {% endif %}
+                </div>
+         
+                
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+{% endblock body %}

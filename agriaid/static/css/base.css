@@ -1,0 +1,36 @@
+
+.custom-navbar {
+    /* background: linear-gradient(to left, #afe5af, #21e493); */
+    background-color:rgb(183,232,183);
+    border-bottom:2px solid rgb(13, 148, 46) ;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: green;
+    
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    padding: 10px 20px;
+    color: green;
+}
+
+.navbar-nav .nav-link:hover{
+    color:green;
+}
+
+ .navbar-nav .nav-link.active {
+    color: #1f221f;
+}
+
+
+
+
+
+
+
+
+

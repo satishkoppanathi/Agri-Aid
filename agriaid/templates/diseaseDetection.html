@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+Disease Detection {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            
+    body{
+        background-image: url('../static/images/backgrounds/tFQb67ht.jpeg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the section */
+        background-position: center; /* Centers the background image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Sets the minimum height of the section */
+        position: relative; /* Positions the content correctly */
+    }
+        
+        head {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container" style="margin-top: 100px;">
+
+
+            <h1 class="head">Upload Image for Disease Detection</h1>
+            <form method="POST" class="head" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Upload</button>
+            </form>
+            <h2 class="head">result :</h2>
+            {% if prediction %}
+            <h1 class="head">Prediction : {{prediction}}</h1>
+            {% endif %}
+        </div>
+    </center>
+
+</body>
+
+</html>
+{% endblock body %}

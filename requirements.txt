@@ -1,0 +1,23 @@
+# Django framework
+Django
+
+# Machine learning libraries
+numpy
+pandas
+scikit-learn
+tensorflow  # or torch if you're using PyTorch
+keras       # Keras as a high-level API for TensorFlow
+
+# Database and ORM (optional)
+psycopg2-binary  # If using PostgreSQL
+
+# Other utilities
+gunicorn
+
+# Web scraping and data processing (optional)
+beautifulsoup4  # For web scraping
+requests        # For making HTTP requests
+
+# Model serialization and deployment
+joblib          # For saving models to disk (scikit-learn)
+pickle5         # For more efficient model serialization

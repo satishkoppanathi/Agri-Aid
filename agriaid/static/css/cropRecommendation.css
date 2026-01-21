@@ -1,0 +1,134 @@
+
+
+        body{
+            background-image:url("../static/images/fevicon.png");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:100% 100%;
+        }
+    
+/* Crop Prediction form styling */
+.crop-prediction {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding: 2rem; */
+    margin: auto;
+    max-width: 900px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form label styling */
+.form-label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #495057;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.animated-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    padding: 0.75rem 1.25rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    outline: none;
+}
+
+/* Custom button styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+.container-result{
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.crop_result{
+    color: green;
+}
+/* Animation for icons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #007bff;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #0056b3;
+    }
+    100% {
+        transform: scale(1);
+        color: #007bff;
+    }
+}
+
+.animated-icon {
+    animation: pulse 1.5s infinite;
+}
+
+/* Animation for form appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 767px) {
+    .form-label {
+        font-size: 0.875rem;
+    }
+
+    .form-control {
+        font-size: 0.875rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-size: 1.125rem;
+    }
+}

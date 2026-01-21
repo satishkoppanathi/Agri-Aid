@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block title %}
+Crop Recommendation {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/cropRecommendation.css">
+    
+</head>
+<style>
+    .crop_result{
+        color: white;
+    }   
+   
+    .crop-prediction {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 900px;
+        margin:auto;
+        {% comment %} height:100vh; {% endcomment %}
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .form-label {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        color: #495057;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        transition: color 0.3s ease;
+    }
+
+    .hehe{
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    body{
+        background-image: url('../static/images/backgrounds/agriculture-iot-with-rice-field-background.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the section */
+        background-position: center; /* Centers the background image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Sets the minimum height of the section */
+        position: relative; /* Positions the content correctly */
+    }
+</style>
+
+
+<body>
+    <section class="container mt-5">
+        <div class="crop-prediction">
+            <h2 class="text-center mb-4">Crop Recommendation</h2>
+            <p class="text-center lead mb-4">Enter the parameters to get crop predictions</p>
+            <form action="/cropRecommendation" method="POST" class="hehe">
+                {% csrf_token %}
+                <div class="row">
+
+                    <!-- Nitrogen -->
+                    <div class="col-md-6 col-lg-4 form-group">
+                        <label for="nitrogen" class="form-label">
+                            <i class="fas fa-flask animated-icon"></i> Nitrogen (kg/ha)
+                        </label>
+                        <input type="number" class="form-control" name="nitrogen" id="nitrogen"
+                            placeholder="Enter nitrogen level" required>
+                    </div>
+                    <!-- Phosphorus -->
+                    <div class="col-md-6 col-lg-4 form-group">
+                        <label for="phosphorous" class="form-label">
+                            <i class="fa-solid fa-filter animated-icon"></i> Phosphorus (kg/ha)
+                        </label>
+                        <input type="number" class="form-control" name="phosphorous" id="phosphorous"
+                            placeholder="Enter phosphorus level" required>
+                    </div>
+                    <!-- Potassium -->
+                    <d.crop-prediction {
+                        background: #ffffff;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        padding:20px;
+                        max-width: 900px;
+                        animation: fadeIn 1s ease-in-out;
+                    }iv class="col-md-6 col-lg-4 form-group">
+                        <label for="potassium" class="form-label">
+                            <i class="fas fa-atom animated-icon"></i> Potassium (kg/ha)
+                        </label>
+                        <input type="number" class="form-control" name="potassium" id="potassium"
+                            placeholder="Enter potassium level" required>
+                    </div>
+                    <!-- Temperature -->
+                    <div class="col-md-6 col-lg-4 form-group">
+                        <label for="temperature" class="form-label">
+                            <i class="fas fa-thermometer-half animated-icon"></i> Temperature (°C)
+                        </label>
+                        <input type="number" class="form-control" name="temperature" id="temperature"
+                            placeholder="Enter temperature" required>
+                    </div>
+
+                    <!-- Humidity -->
+                    <div class="col-md-6 col-lg-4 form-group">
+                        <label for="humidity" class="form-label">
+                            <i class="fas fa-tint animated-icon"></i> Humidity (%)
+                        </label>
+                        <input type="number" class="form-control" name="humidity" id="humidity"
+                            placeholder="Enter humidity" required>
+                    </div>
+
+                    <!-- pH Level -->
+                    <div class="col-md-6 col-lg-4 form-group">
+                        <label for="ph" class="form-label">
+                            <i class="fas fa-pH animated-icon"></i> pH Level
+                        </label>
+                        <input type="number" class="form-control" name="ph" id="ph" step="0.1"
+                            placeholder="Enter pH level" required>
+                    </div>
+
+                    <!-- Rainfall -->
+                    <div class="col-md-6 col-lg-4 form-group">
+                        <label for="rainfall" class="form-label">
+                            <i class="fas fa-cloud-rain animated-icon"></i> Rainfall (mm)
+                        </label>
+                        <input type="number" class="form-control" name="rainfall" id="rainfall"
+                            placeholder="Enter rainfall" required>
+                    </div>
+
+                    <!-- Moisture -->
+                    <!-- <div class="col-md-6 col-lg-4 form-group">
+                        <label for="moisture" class="form-label">
+                            <i class="fas fa-water animated-icon"></i> Moisture (%)
+                        </label>
+                        <input type="number" class="form-control" id="moisture" placeholder="Enter moisture">
+                    </div> -->
+
+                    <!-- Crop Type -->
+                    <!-- <div class="col-md-6 col-lg-4 form-group">
+                        <label for="crop-type" class="form-label">
+                            <i class="fas fa-leaf animated-icon"></i> Crop Type
+                        </label>
+                        <input type="text" class="form-control" id="crop-type" placeholder="Enter crop type">
+                    </div>    -->
+                </div>
+
+                <!-- Submit button -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Predict Crop</button>
+                </div>
+                <div class="result text-center mt-4">
+                    {% if result %}
+                    <h6>RECOMMENDED CROP :</h6>
+                    <h2>{{result}}</h2>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+        
+    </section>
+    {% comment %} <section class="crop_result"></section>
+
+    </section> {% endcomment %}
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+{% endblock body %}

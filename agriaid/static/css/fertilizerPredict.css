@@ -1,0 +1,116 @@
+/* General Styles */
+
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #2e8b57, #3cb371);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header p.lead {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Fertilizer Prediction Section */
+.fertilizer-prediction {
+    padding: 40px 20px;
+    background-image: url("../images/backgrounds/flower-pot-plant-top-view.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    /* background-color: #fff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+h2 .icon {
+    color: #3cb371;
+    margin-right: 10px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.form-label .icon {
+    color: #3cb371;
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3cb371;
+    box-shadow: 0 0 0 0.2rem rgba(60, 179, 113, 0.25);
+    outline: none;
+}
+
+/* Button */
+.btn-submit {
+    background-color: #3cb371;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2e8b57;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
